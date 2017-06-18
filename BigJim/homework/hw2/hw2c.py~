@@ -1,0 +1,53 @@
+#James Dutton
+#hw2c Diopphantine equation in python
+#define globals
+A = 6
+B = 9
+C = 20
+#prototype function call
+#function recursively calls as it decrements x
+def solveDis(x):
+    #if (x - C) > C: #subtract 20 if the number is larger than 40
+    if (x % B) == 0:
+        x = x - B
+        if(x == 0):
+            print("It worked")
+            print(B)
+        else:
+            solveDis(x)
+            print(B)
+    elif x % 3 == 0: 
+        if (x - B)%C==0:
+            x = x - B
+            solveDis(x)
+            print(B)
+        elif x >= A:
+            x = x - A           
+            if x == 0:                
+                print("It Worked")
+                print(A)
+            else:
+                solveDis(x)
+                print(A)
+    elif x  > C:#subtract 6 if the number can be evenly divided by 6
+        x = x - C
+        solveDis(x)
+        print(C)
+        #if x == 0:#check to see if the algorithm worked and print that it did
+         #    print("It worked!")        
+        #else:
+         #   solveDis(x)
+        #print(A)
+    else:
+        print("Does not work")
+        
+     
+
+T = int(raw_input("Please enter a number of chicken nuggets (0 will end the program: "))
+while T != 0:
+    solveDis(T)
+    T = int(raw_input("Please enter a number of chicken nuggets (0 will end the program: "))
+
+
+
+

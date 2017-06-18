@@ -1,0 +1,3 @@
+wordList = ['Jose','Sue','Ivan']
+for i in range(3):
+    print (wordList[i] + ' ') * 2

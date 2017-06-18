@@ -1,0 +1,8 @@
+#James Dutton
+
+N = input("Please enter your name: ")
+
+print("Welcome " + N)
+
+
+

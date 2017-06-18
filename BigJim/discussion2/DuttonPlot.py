@@ -1,0 +1,11 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+T = np.arange(1.,3.,.02)
+Y = ((6 * np.log(T)) - (7 * np.exp(.2*T)))
+plt.plot(T,Y)
+plt.xlabel('Time (min)')
+plt.ylabel('Temperature (Celsius)')
+plt.title('James Dutton Plot')
+plt.show()
+print('Hello World!, I just wrote my first Python program. Yaayyyyyy\n James Dutton')
